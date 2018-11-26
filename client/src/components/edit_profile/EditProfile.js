@@ -9,7 +9,7 @@ import TextFieldGroup from '../common/TextFieldGroup';
 import { createProfile, getCurrentProfile } from '../../actions/profileActions';
 import isEmpty from '../../validation/is-empty';
 
-class CreateProfile extends Component {
+class EditProfile extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -37,6 +37,18 @@ class CreateProfile extends Component {
   componentDidMount() {
     this.props.getCurrentProfile();
   }
+
+  // static getDerivedStateFromProps(nextProps) {
+  //   if (nextProps.errors) {
+  //     return { errors: nextProps.errors };
+  //   } else return null;
+  // }
+
+  // componentDidUpdate(prevProps) {
+  //   if (prevProps.errors) {
+  //     this.setState({ errors: this.state.errors });
+  //   }
+  // }
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.errors) {
@@ -289,7 +301,7 @@ class CreateProfile extends Component {
   }
 }
 
-CreateProfile.propTypes = {
+EditProfile.propTypes = {
   createProfile: PropTypes.func.isRequired,
   getCurrentProfile: PropTypes.func.isRequired,
   profile: PropTypes.object.isRequired,
@@ -304,4 +316,4 @@ const mapStateToProps = state => ({
 export default connect(
   mapStateToProps,
   { createProfile, getCurrentProfile }
-)(withRouter(CreateProfile));
+)(withRouter(EditProfile));
