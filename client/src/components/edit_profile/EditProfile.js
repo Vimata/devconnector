@@ -38,18 +38,6 @@ class EditProfile extends Component {
     this.props.getCurrentProfile();
   }
 
-  // static getDerivedStateFromProps(nextProps) {
-  //   if (nextProps.errors) {
-  //     return { errors: nextProps.errors };
-  //   } else return null;
-  // }
-
-  // componentDidUpdate(prevProps) {
-  //   if (prevProps.errors) {
-  //     this.setState({ errors: this.state.errors });
-  //   }
-  // }
-
   componentWillReceiveProps(nextProps) {
     if (nextProps.errors) {
       this.setState({ errors: nextProps.errors });

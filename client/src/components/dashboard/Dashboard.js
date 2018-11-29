@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { getCurrentProfile, deleteAccount } from '../../actions/profileActions';
-import Spinner from '../common/spinner';
+import Spinner from '../common/Spinner';
 import ProfileActions from './ProfileActions';
 import Experience from './Experience';
 import Education from './Education';
@@ -64,7 +64,7 @@ class Dashboard extends Component {
         <div className="container">
           <div className="row">
             <div className="col-md-12">
-              <h3 className="display-4">Dashboard</h3>
+              <h3 className="display-5">Dashboard</h3>
               {dashboardContent}
             </div>
           </div>
