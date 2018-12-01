@@ -36,7 +36,7 @@ class ProfileItem extends Component {
               View Profile
             </Link>
           </div>
-          <div className="col-md4 d-none d-md-block">
+          <div className="col-md-4 col-sm -2 d-none d-md-block">
             <h4>Skill Set</h4>
             <ul className="list-group">
               {profile.skills.slice(0, 4).map((skill, index) => (
